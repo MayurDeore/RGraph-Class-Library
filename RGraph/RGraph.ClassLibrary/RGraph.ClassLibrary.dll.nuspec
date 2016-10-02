@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RGraph.classLibrary</id>
-    <version>0.0.2</version>
+    <version>0.1</version>
     <authors>Mayur Deore</authors>
     <owners>Mayur Deore</owners>
     <projectUrl>https://github.com/justcodeweb/RGraph-Class-Library</projectUrl>
@@ -15,10 +15,6 @@
     </dependencies>
   </metadata>
 <files>
-    <file src="Scripts\RGraph\RGraph.common.core.js" target="Scripts"/>
-    <file src="Scripts\RGraph\RGraph.common.dynamic.js" target="Scripts"/>
-    <file src="Scripts\RGraph\RGraph.common.tooltips.js" target="Scripts"/>
-    <file src="Scripts\RGraph\RGraph.pie.js" target="Scripts"/>
     <file src="Scripts\RGraph.custom.js" target="Scripts"/>
   </files>
 </package>

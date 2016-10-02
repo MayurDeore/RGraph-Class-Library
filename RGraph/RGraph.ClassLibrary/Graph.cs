@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RGraph.PieChart
+namespace RGraph
 {
-    public class Pie :StringServices,IGraph
+    public class Graph :StringServices,IGraph
     {
         private GraphConfig _config;
         /// <summary>
         /// Constructor Pie Chart
         /// </summary>
-        public Pie()
+        public Graph()
         {
             this._config = new GraphConfig();
         }
@@ -23,7 +23,7 @@ namespace RGraph.PieChart
         /// e.g Custom Colors string Array can passed 
         /// </summary>
         /// <param name="conf">Config object with custom configuration.</param>
-        public Pie(GraphConfig conf)
+        public Graph(GraphConfig conf)
         {
             this._config = conf;
         }
@@ -41,12 +41,10 @@ namespace RGraph.PieChart
         ///  </returns>
         private List<string> getGraphDataList(DataSet ds)
         {
-
-            var PieString = new List<string>();
             //chartData:-  double values
             //labelData:-  string Label Values
             //colorData:-  string Color values
-
+            var PieString = new List<string>();
             var chartData = initializeString();
             var labelData = initializeString();
             var colorData = initializeString();

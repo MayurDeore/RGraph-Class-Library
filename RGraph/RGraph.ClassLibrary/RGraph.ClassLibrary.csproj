@@ -43,7 +43,7 @@
     <Compile Include="Common\StringServices.cs" />
     <Compile Include="Common\IGraph.cs" />
     <Compile Include="GraphConfig.cs" />
-    <Compile Include="PieChart\Pie.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,10 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\RGraph.custom.js" />
-    <Content Include="Scripts\RGraph\RGraph.common.core.js" />
-    <Content Include="Scripts\RGraph\RGraph.common.dynamic.js" />
-    <Content Include="Scripts\RGraph\RGraph.common.tooltips.js" />
-    <Content Include="Scripts\RGraph\RGraph.pie.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
