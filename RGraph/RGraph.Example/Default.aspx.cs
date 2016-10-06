@@ -1,4 +1,4 @@
-﻿using RGraph.PieChart;
+﻿using RGraph;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -35,17 +35,17 @@ namespace RGraph.Example
             datatable.Rows.Add(datarow);
             datarow = datatable.NewRow();
             datarow[0] = "Ruby";
-            datarow[1] = 100;
+            datarow[1] = 50;
             datatable.Rows.Add(datarow);
             datarow = datatable.NewRow();
             datarow[0] = "CSharp";
-            datarow[1] = 100;
+            datarow[1] = 40;
             datatable.Rows.Add(datarow);
             dataset.Tables.Add(datatable);
 
             var config = new GraphConfig();
             config.Colors = new string[] { "Red", "Green", "Blue" };
-            var graph = new Pie(config);
+            var graph = new Graph(config);
             returnData = graph.getGraphData(dataset);
             return returnData;
 

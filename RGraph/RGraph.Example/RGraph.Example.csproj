@@ -40,7 +40,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="RGraph.ClassLibrary">
-      <HintPath>..\packages\RGraph.classLibrary.0.0.2\lib\net45\RGraph.ClassLibrary.dll</HintPath>
+      <HintPath>..\packages\RGraph.classLibrary.1.0\lib\net45\RGraph.ClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -60,6 +60,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\jquery-1.10.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.0.js" />
+    <Content Include="Scripts\jquery-1.10.0.min.js" />
+    <Content Include="Scripts\jquery-1.10.0.min.map" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -69,17 +74,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="packages.config" />
-    <None Include="Scripts\jquery-1.10.0.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.0.js" />
-    <Content Include="Scripts\jquery-1.10.0.min.js" />
     <Content Include="Scripts\RGraph.custom.js" />
+    <Content Include="Scripts\RGraph\RGraph.bar.js" />
     <Content Include="Scripts\RGraph\RGraph.common.core.js" />
     <Content Include="Scripts\RGraph\RGraph.common.dynamic.js" />
     <Content Include="Scripts\RGraph\RGraph.common.tooltips.js" />
+    <Content Include="Scripts\RGraph\RGraph.line.js" />
     <Content Include="Scripts\RGraph\RGraph.pie.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.10.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">

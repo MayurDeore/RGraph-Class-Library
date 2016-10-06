@@ -2,14 +2,15 @@
 <package >
   <metadata>
     <id>RGraph.classLibrary</id>
-    <version>0.1</version>
+    <version>1.0</version>
     <authors>Mayur Deore</authors>
     <owners>Mayur Deore</owners>
     <projectUrl>https://github.com/justcodeweb/RGraph-Class-Library</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>RGraph Class Library to generate data for RGraph charts from DataSet. This library also provides sample javascript code to generate 3D Pie Chart.</description>
-    <releaseNotes>Pie Chart added. Access Chart data as object in javascript code.</releaseNotes>
-    <tags>RGraph Pie 3D-Graph</tags>
+    <description>RGraph Class Library to generate data for RGraph charts from DataSet. 
+    This library also provides sample javascript code to generate various Charts like Line,Bar,Pie etc.</description>
+    <releaseNotes>Same process to generate data for any chart.</releaseNotes>
+    <tags>RGraph Pie 3D-Graph Bar Chart</tags>
     <dependencies>
       <dependency id="jQuery" version="[1.10.0,3.2.0)" />
     </dependencies>
