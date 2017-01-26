@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
@@ -47,6 +48,9 @@ namespace RGraph.Example
             config.Colors = new string[] { "Red", "Green", "Blue" };
             var graph = new Graph(config);
             returnData = graph.getGraphData(dataset);
+
+
+            var script = new StringBuilder();
             return returnData;
 
 

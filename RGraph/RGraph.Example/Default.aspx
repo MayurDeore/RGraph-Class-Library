@@ -24,6 +24,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
         <hr />
 
         <center><h3>Line Chart</h3></center>
@@ -58,32 +59,47 @@
     <canvas id="cvsPie3d" width="900" height="600"></canvas>
     </div>
 
+         <hr />
 
+        <center><h3>3D Donut Chart</h3></center>
+        <div>
+    <canvas id="cvsDonut3d" width="900" height="600"></canvas>
+    </div>
+
+
+        
         <script>
-        $(function () {
+    
 
-            $.ajax({
+           
+           
+            $(function (){
 
-                url: "Default.aspx/getChartData",
-                type:"post",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (result) {
-                    //Line Chart
-                    chartLineChart(result, 'cvsLine', 'Programming Languages');
-                    //2D Bar Chart
-                    chartBarChart(result, 'cvsBar', 'Programming Languages', false);
-                    //3D Bar Chart
-                    chartBarChart(result, 'cvsBar3d', 'Programming Languages', true);
-                    //2d Pie Chart
-                    chartPieChart(result, 'cvsPie', 'Programming Languages', false);
-                    //3d Pie Chart
-                    chartPieChart(result, 'cvsPie3d', 'Programming Languages', true);
-                }
+                 //Line Chart
+                new rgraphclass("Default.aspx/getChartData", "", 'Line', 'cvsLine', 'Programming Languages');       
+
+                //2D Bar Chart
+                new rgraphclass("Default.aspx/getChartData", "", 'Bar', 'cvsBar', 'Programming Languages', false);
+
+                          
+                //3D Bar Chart
+                new rgraphclass("Default.aspx/getChartData", "", 'Bar', 'cvsBar3d', 'Programming Languages', true);
+
+                         
+                //2d Pie Chart
+                new rgraphclass("Default.aspx/getChartData", "", 'Pie', 'cvsPie', 'Programming Languages', false);
+
+                          
+                //3d Pie Chart
+                new rgraphclass("Default.aspx/getChartData", "", 'Pie', 'cvsPie3d', 'Programming Languages', true);
+
+                         
+                new rgraphclass("Default.aspx/getChartData", "", 'Donut', 'cvsDonut3d', 'Programming Languages', true);
+
+
+           
             });
-
-        });
-
+        
        
     </script>
     </form>
