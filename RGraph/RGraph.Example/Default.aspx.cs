@@ -20,6 +20,7 @@ namespace RGraph.Example
         [WebMethod]
         public static Chart getChartData()
         {
+         
             var returnData = new Chart();
 
             var dataset = new DataSet();
@@ -46,6 +47,7 @@ namespace RGraph.Example
 
             var config = new GraphConfig();
             config.Colors = new string[] { "Red", "Green", "Blue" };
+           
             var graph = new Graph(config);
             returnData = graph.getGraphData(dataset);
 

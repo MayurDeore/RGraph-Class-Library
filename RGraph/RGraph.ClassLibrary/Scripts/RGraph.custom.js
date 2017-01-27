@@ -16,6 +16,7 @@
         this.canvasId = canvasId;
         this.graphTitle = graphTitle;
         this.is3d = flag3d;//boolean
+    
         this.draw();
     };
 
@@ -46,8 +47,9 @@ var webservice = (function () {
     webservice.prototype.getData = function () {
 
         var def = $.ajax({
-            url: "Default.aspx/getChartData",
+            url: this.url,
             type: "post",
+            data:this.data,
             contentType: "application/json; charset=utf-8",
             dataType: "json"
         });
