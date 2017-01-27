@@ -14,6 +14,7 @@ namespace RGraph
         /// Array of colors for graphs
         /// </summary>
         public string[] Colors { get; set; }
+
         /// <summary>
         /// Constructor Config
         /// </summary>

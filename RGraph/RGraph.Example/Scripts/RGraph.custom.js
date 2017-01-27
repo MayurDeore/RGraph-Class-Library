@@ -16,17 +16,18 @@
         this.canvasId = canvasId;
         this.graphTitle = graphTitle;
         this.is3d = flag3d;//boolean
+    
         this.draw();
     };
 
     rgraphclass.prototype.draw = function () {
-      
+
         var self = this;
         var ajax = new webservice(self.url, self.dataToSend).getData();
-        
+
         $.when(ajax).then(function (result) {
-      
-                 new graph(result.d, self.canvasId, self.graphTitle, self.is3d, self.graphType);
+
+            new graph(result.d, self.canvasId, self.graphTitle, self.is3d, self.graphType);
         });
 
     };
@@ -44,10 +45,11 @@ var webservice = (function () {
     };
 
     webservice.prototype.getData = function () {
-        
+
         var def = $.ajax({
-            url: "Default.aspx/getChartData",
+            url: this.url,
             type: "post",
+            data:this.data,
             contentType: "application/json; charset=utf-8",
             dataType: "json"
         });
@@ -62,8 +64,8 @@ var webservice = (function () {
 var graph = (function () {
 
 
-    var graph = function (response, canvasId, graphTitle, flag,graphType) {
-       
+    var graph = function (response, canvasId, graphTitle, flag, graphType) {
+
         this.response = response;
         this.canvasId = canvasId;
         this.graphTitle = graphTitle;
@@ -74,13 +76,13 @@ var graph = (function () {
         this.labelData = "";
         this.colorData = "";
         this.opt = "";
-        
+
         this.draw();
     };
 
-    
 
-    graph.prototype.set=function() {
+
+    graph.prototype.set = function () {
 
         this.opt = {
 
@@ -98,10 +100,10 @@ var graph = (function () {
         };
     }
 
-   
 
 
-    graph.prototype.draw=function() {
+
+    graph.prototype.draw = function () {
 
         this.graphdata = this.response;
 
@@ -119,12 +121,12 @@ var graph = (function () {
                 default: this.opt.variant = '3d';
 
             }
-            
+
 
         }
-            
-            
-    
+
+
+
         var g = new RGraph[this.graphType]({
             id: this.canvasId,
             data: this.chartData,
